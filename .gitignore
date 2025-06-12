@@ -1,0 +1,15 @@
+# Supabase
+config.js
+
+# Generated files
+env-config.js
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# User-specific
+Favicon.png
+
+# Node modules (if any)
+node_modules/

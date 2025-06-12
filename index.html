@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CardConnect NW – Local MTG Players</title>
+  <meta name="description" content="Connect, play, and trade with Magic: The Gathering players in the Pacific Northwest. Find local games and trade cards with your community.">
+  <meta property="og:title" content="CardConnect NW – Local MTG Players">
+  <meta property="og:description" content="Connect, play, and trade with players near you.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="Favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>CardConnect NW – Local MTG Players</h1>
+    <p>Connect, play, and trade with players near you.</p>
+  </header>
+
+  <main>
+    <!-- Tab Navigation -->
+    <nav>
+      <button id="gamesTab" class="active">Let's Play</button>
+      <button id="tradesTab">Trade Cards</button>
+    </nav>
+
+    <!-- Games Section -->
+    <div id="gamesContent">
+      <!-- Post Form -->
+      <section>
+        <h2>🎲 Want to Play?</h2>
+        <form id="postForm">
+          <input id="playerName" type="text" placeholder="What's your name or nickname?" required />
+          <select id="location" title="Location" required>
+            <option value="" disabled selected>Where do you want to play?</option>
+            <option>Seattle</option>
+            <option>Lynnwood</option>
+            <option>Mountlake Terrace</option>
+            <option>Everett</option>
+            <option>Online</option>
+          </select>
+          <select id="format" title="Format" required>
+            <option value="" disabled selected>What format sounds fun?</option>
+            <option>Commander</option>
+            <option>Modern</option>
+            <option>Standard</option>
+            <option>Draft</option>
+            <option>Pauper</option>
+          </select>
+          <input id="preferredTime" type="datetime-local" title="When works for you?" required />
+          <textarea id="notes" placeholder="Any details? (skill level, house rules, etc.)"></textarea>
+          <button type="submit">🎲 Let's Find Players!</button>
+        </form>
+      </section>
+
+      <!-- Filter Controls -->
+      <div class="filter-controls">
+        <div class="filter-group">
+          <label for="locationFilter">Browse by Area</label>
+          <select id="locationFilter">
+            <option value="">All Locations</option>
+            <option>Seattle</option>
+            <option>Lynnwood</option>
+            <option>Mountlake Terrace</option>
+            <option>Everett</option>
+            <option>Online</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="formatFilter">Show Format</label>
+          <select id="formatFilter">
+            <option value="">All Formats</option>
+            <option>Commander</option>
+            <option>Modern</option>
+            <option>Standard</option>
+            <option>Draft</option>
+            <option>Pauper</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="sortBy">Show Me...</label>
+          <select id="sortBy">
+            <option value="newest">Newest First</option>
+            <option value="oldest">Oldest First</option>
+            <option value="soonest">Soonest Games</option>
+          </select>
+        </div>
+        <button type="button" class="clear-filters" id="clearFilters">Show All</button>
+      </div>
+
+      <!-- Game Listings -->
+      <section>
+        <h2>🎮 Players Looking for Games</h2>
+        <div id="gameListings">
+          <!-- Game posts will be dynamically inserted here -->
+        </div>
+      </section>
+    </div>
+
+    <!-- Trades Section (hidden by default) -->
+    <div id="tradesContent" class="hidden">
+      <!-- Trade Post Form -->
+      <section>
+        <h2>📤 Got Cards to Trade?</h2>
+        <form id="tradeForm">
+          <input id="tradePlayerName" type="text" placeholder="What's your name or nickname?" required />
+          <select id="tradeLocation" title="Location" required>
+            <option value="" disabled selected>Where are you located?</option>
+            <option>Seattle</option>
+            <option>Lynnwood</option>
+            <option>Mountlake Terrace</option>
+            <option>Everett</option>
+            <option>Online</option>
+          </select>
+          <input id="tradeContact" type="text" placeholder="How should people reach you?" required />
+          <textarea id="tradeHave" placeholder="What cards are you offering?" required></textarea>
+          <textarea id="tradeWant" placeholder="What are you hoping to get?" required></textarea>
+          <textarea id="tradeNotes" placeholder="Extra info? (conditions, foil, languages, etc.)"></textarea>
+          <button type="submit">📤 Submit Trade</button>
+        </form>
+      </section>
+
+      <!-- Filter Controls -->
+      <div class="filter-controls">
+        <div class="filter-group">
+          <label for="tradeLocationFilter">See Trades Near...</label>
+          <select id="tradeLocationFilter">
+            <option value="">All Locations</option>
+            <option>Seattle</option>
+            <option>Lynnwood</option>
+            <option>Mountlake Terrace</option>
+            <option>Everett</option>
+            <option>Online</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="tradeSortBy">Show Me...</label>
+          <select id="tradeSortBy">
+            <option value="newest">Newest First</option>
+            <option value="oldest">Oldest First</option>
+          </select>
+        </div>
+        <button type="button" class="clear-filters" id="clearTradeFilters">Show All</button>
+      </div>
+
+      <!-- Trade Listings -->
+      <section>
+        <h2>🆕 Latest Trades Near You</h2>
+        <div id="tradeListings">
+          <!-- Trade posts will be dynamically inserted here -->
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 CardConnect NW — Community Created
+  </footer>
+
+  <!-- Environment configuration for production -->
+  <script src="env-config.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
