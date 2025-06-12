@@ -1,0 +1,9 @@
+# Supabase
+config.js
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# User-specific
+Favicon.png

@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1a1a;
+    color: #f0e6d2;
+}
+
+header {
+    font-family: 'IM Fell English SC', serif;
+    background-color: #3c3c3c;
+    border-bottom: 2px solid #c8a2c8;
+}
+
+h1, h2 {
+    font-family: 'IM Fell English SC', serif;
+}
+
+.bg-purple-800 {
+    background-color: #3c3c3c;
+}
+
+.bg-purple-700 {
+    background-color: #5a5a5a;
+}
+
+.hover\:bg-purple-600:hover {
+    background-color: #7a7a7a;
+}
+
+.bg-white {
+    background-color: #2a2a2a;
+    border: 1px solid #4a4a4a;
+}
+
+.text-gray-800 {
+    color: #f0e6d2;
+}
+
+.text-gray-500 {
+    color: #a0a0a0;
+}
+
+.border {
+    border-color: #4a4a4a;
+}
+
+.rounded {
+    border-radius: 0.5rem;
+}
+
+.shadow-md {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+input, select, textarea {
+    background-color: #3a3a3a;
+    color: #f0e6d2;
+    transition: border-color 0.2s ease-in-out;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #c8a2c8;
+}
+
+button {
+    transition: background-color 0.2s ease-in-out;
+}
+
+option {
+    background-color: #3a3a3a;
+    color: #f0e6d2;
+}
+
+/* Tab styling */
+nav button {
+    transition: all 0.2s ease-in-out;
+}
